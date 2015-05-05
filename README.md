@@ -14,4 +14,12 @@ cr('1.2.3.4/30');
 //=> [ '1.2.3.4', '1.2.3.5', '1.2.3.6', '1.2.3.7' ]
 ```
 
+## API
+### cr(cidr, [options])
+- `cidr` {String} The IP adress in CIDR notation. Required.
+- `options` {Object} Options object.
+
+#### Options
+- `onlyHosts` {Boolean} Whether the network and broadcast addresses should be excluded. Only works for /30 and below. Default: false.
+
 © 2015 [silverwind](https://github.com/silverwind), distributed under BSD licence
