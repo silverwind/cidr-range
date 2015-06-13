@@ -2,7 +2,7 @@
 
 var ip = require("ip");
 
-module.exports = function cidrRange (cidr, opts) {
+module.exports = function cidrRange(cidr, opts) {
     if (typeof cidr !== "string") {
         throw new Error("Expected a string");
     }

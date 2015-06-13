@@ -1,10 +1,10 @@
 {
   "name": "cidr-range",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get an array of IP addresses for a given CIDR range",
   "author": "silverwind <me@silverwind.io> (https://github.com/silverwind)",
   "repository": "silverwind/cidr-range",
-  "license": "BSD-2-clause",
+  "license": "BSD-2-Clause",
   "main": "cidr-range.js",
   "scripts": {
     "test": "mocha"
@@ -19,13 +19,12 @@
     "cidr",
     "range"
   ],
+  "dependencies": {
+    "ip": "^0.3.2"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-bump": "^0.3.1",
-    "grunt-shell": "^1.1.2",
-    "grunt-contrib-jshint": "^0.11.2"
-  },
-  "dependencies": {
-    "ip": "^0.3.2"
+    "grunt-shell": "^1.1.2"
   }
 }
