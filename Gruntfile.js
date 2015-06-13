@@ -32,17 +32,21 @@ module.exports = function (grunt) {
             modules: {
                 command: "rm -rf node_modules && npm install"
             },
+            test: {
+                command: "npm test"
+            },
             lint: {
                 command: "eslint --reset --color --quiet ."
             }
         }
     });
 
-    grunt.registerTask("update", ["shell:lint", "shell:update", "shell:modules"]);
-    grunt.registerTask("patch",  ["shell:lint", "bump", "shell:push", "shell:publish"]);
-    grunt.registerTask("minor",  ["shell:lint", "bump:minor", "shell:push", "shell:publish"]);
-    grunt.registerTask("major",  ["shell:lint", "bump:major", "shell:push", "shell:publish"]);
+    grunt.registerTask("update", ["shell:lint", "shell:test", "shell:update", "shell:modules"]);
+    grunt.registerTask("patch",  ["shell:lint", "shell:test", "bump", "shell:push", "shell:publish"]);
+    grunt.registerTask("minor",  ["shell:lint", "shell:test", "bump:minor", "shell:push", "shell:publish"]);
+    grunt.registerTask("major",  ["shell:lint", "shell:test", "bump:major", "shell:push", "shell:publish"]);
     grunt.registerTask("lint",   ["shell:lint"]);
+    grunt.registerTask("test",   ["shell:test"]);
 
     grunt.loadNpmTasks("grunt-bump");
     grunt.loadNpmTasks("grunt-shell");
