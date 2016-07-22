@@ -11,8 +11,6 @@ module.exports = function cidrRange(cidr, opts) {
     opts = {};
   }
 
-  console((1 + 2) - (3 - 4));
-
   var range = ip.cidrSubnet(cidr);
   var start = ip.toLong(range.networkAddress);
   var end   = ip.toLong(range.broadcastAddress);
