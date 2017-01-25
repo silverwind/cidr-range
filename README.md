@@ -1,4 +1,5 @@
-# cidr-range [![NPM version](https://img.shields.io/npm/v/cidr-range.svg?style=flat)](https://www.npmjs.org/package/cidr-range) [![Dependency Status](http://img.shields.io/david/silverwind/cidr-range.svg?style=flat)](https://david-dm.org/silverwind/cidr-range)
+# cidr-range
+[![](https://img.shields.io/npm/v/cidr-range.svg?style=flat)](https://www.npmjs.org/package/cidr-range) [![](https://img.shields.io/npm/dm/cidr-range.svg)](https://www.npmjs.org/package/cidr-range) [![](https://api.travis-ci.org/silverwind/cidr-range.svg?style=flat)](https://travis-ci.org/silverwind/cidr-range)
 > Get an array of IP addresses for a given CIDR range
 
 ## Installation
