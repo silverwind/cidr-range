@@ -1,6 +1,6 @@
 "use strict";
 
-var ip = require("ip");
+const ip = require("ip");
 
 module.exports = function cidrRange(cidr, opts) {
   if (typeof cidr !== "string") {
@@ -11,12 +11,12 @@ module.exports = function cidrRange(cidr, opts) {
     opts = {};
   }
 
-  var range = ip.cidrSubnet(cidr);
-  var start = ip.toLong(range.networkAddress);
-  var end   = ip.toLong(range.broadcastAddress);
-  var out   = [];
+  const range = ip.cidrSubnet(cidr);
+  const start = ip.toLong(range.networkAddress);
+  const end = ip.toLong(range.broadcastAddress);
+  const out = [];
 
-  for (var i = start; i <= end; i++) {
+  for (let i = start; i <= end; i++) {
     out.push(ip.fromLong(i));
   }
 

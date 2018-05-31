@@ -6,8 +6,11 @@
   "repository": "silverwind/cidr-range",
   "license": "BSD-2-Clause",
   "main": "cidr-range.js",
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
-    "test": "mocha"
+    "test": "make test"
   },
   "files": [
     "cidr-range.js"
@@ -20,6 +23,11 @@
     "range"
   ],
   "dependencies": {
-    "ip": "^1.1.3"
+    "ip": "^1.1.5"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-silverwind": "^1.0.42",
+    "updates": "^3.0.0"
   }
 }

@@ -1,18 +1,18 @@
-lint:
-	eslint --ignore-pattern *.min.js server client *.js
+BIN:=node_modules/.bin
 
 test:
-	npm test
+	$(BIN)/eslint *.js
+	node --trace-deprecation --throw-deprecation --trace-warnings test.js
 
 publish:
 	if git ls-remote --exit-code origin &>/dev/null; then git push -u -f --tags origin master; fi
-	if git ls-remote --exit-code gogs &>/dev/null; then git push -u -f --tags gogs master; fi
+	if git ls-remote --exit-code git &>/dev/null; then git push -u -f --tags git master; fi
 	npm publish
 
 update:
-	ncu -ua
+	$(BIN)/updates -u
 	rm -rf node_modules
-	npm install
+	yarn --no-lockfile
 
 npm-patch:
 	npm version patch
@@ -27,4 +27,4 @@ patch: lint test npm-patch publish
 minor: lint test npm-minor publish
 major: lint test npm-major publish
 
-.PHONY: lint publish update npm-patch npm-minor npm-major patch minor major
+.PHONY: lint test publish update npm-patch npm-minor npm-major patch minor major
