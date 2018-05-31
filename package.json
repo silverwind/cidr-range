@@ -1,6 +1,6 @@
 {
   "name": "cidr-range",
-  "version": "1.0.6",
+  "version": "2.0.0",
   "description": "Get an array of IP addresses for a given CIDR range",
   "author": "silverwind <me@silverwind.io> (https://github.com/silverwind)",
   "repository": "silverwind/cidr-range",
