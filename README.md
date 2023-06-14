@@ -2,7 +2,7 @@
 [![](https://img.shields.io/npm/v/cidr-range.svg?style=flat)](https://www.npmjs.org/package/cidr-range) [![](https://img.shields.io/npm/dm/cidr-range.svg)](https://www.npmjs.org/package/cidr-range) [![](https://api.travis-ci.org/silverwind/cidr-range.svg?style=flat)](https://travis-ci.org/silverwind/cidr-range)
 > Get an array of IP addresses for a given CIDR range
 
-*Note: If you need IPv6 support, check out [cidr-tools](https://github.com/silverwind/cidr-tools)'s `expand` method.*
+*Note: Archived, please migrate to [cidr-tools](https://github.com/silverwind/cidr-tools)'s `expand` method.*
 
 ## Installation
 ```
